@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','VueController@public');
+Route::get('/admin','VueController@admin');
