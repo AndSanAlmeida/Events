@@ -19795,9 +19795,9 @@ var render = function() {
         _c("div", { staticClass: "col-sm-6" }, [
           _c("p", [
             _vm._v(
-              "\n                    Copyright © Events\n                    " +
+              "\n          Copyright © Events\n          " +
                 _vm._s(new Date().getFullYear()) +
-                "\n                "
+                "\n        "
             )
           ])
         ]),
@@ -19896,112 +19896,109 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("header", { staticClass: "header" }, [
-    _c("nav", { staticClass: "navbar" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "navbar-holder d-flex align-items-center justify-content-between"
-          },
-          [
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass:
-                  "nav-menu list-unstyled d-flex flex-md-row align-items-md-center"
-              },
-              [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "nav-link",
-                      attrs: { href: "#", title: "Perguntas dos utilizadores" }
-                    },
-                    [
-                      _c("i", { staticClass: "fal fa-envelope" }),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        { staticClass: "badge bg-orange badge-corner" },
-                        [_vm._v(_vm._s(this.$root.numberOfQuestions))]
-                      )
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _vm._m(2)
-              ]
-            )
-          ]
-        )
-      ])
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "navbar-header" }, [
-      _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-        _c("div", { staticClass: "brand-text brand-big" }, [
-          _c("span", [_vm._v("Events | André Almeida")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "brand-text brand-small" }, [
-          _c("strong", [_vm._v("Events")])
+    return _c("header", { staticClass: "header" }, [
+      _c("nav", { staticClass: "navbar" }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "navbar-holder d-flex align-items-center justify-content-between"
+            },
+            [
+              _c("div", { staticClass: "navbar-header" }, [
+                _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "brand-text brand-big" }, [
+                    _c("span", [_vm._v("Events | André Almeida")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "brand-text brand-small" }, [
+                    _c("strong", [_vm._v("Events")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu-btn active",
+                    attrs: { id: "toggle-btn", href: "#" }
+                  },
+                  [_c("span"), _vm._v(" "), _c("span"), _vm._v(" "), _c("span")]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                {
+                  staticClass:
+                    "nav-menu list-unstyled d-flex flex-md-row align-items-md-center"
+                },
+                [
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link",
+                        attrs: { href: "/", title: "Official Page" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "fal fa-arrow-circle-left",
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v("\n              Official Page\n            ")
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link",
+                        attrs: {
+                          href: "#",
+                          title: "Perguntas dos utilizadores"
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "fal fa-envelope" }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          { staticClass: "badge bg-orange badge-corner" },
+                          [_vm._v("3")]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link logout",
+                        attrs: { href: "#", title: "Sair" }
+                      },
+                      [
+                        _vm._v("\n              Logout\n              "),
+                        _c("i", { staticClass: "fal fa-sign-out" })
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]
+          )
         ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "menu-btn active",
-          attrs: { id: "toggle-btn", href: "#" }
-        },
-        [_c("span"), _vm._v(" "), _c("span"), _vm._v(" "), _c("span")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c(
-        "a",
-        {
-          staticClass: "nav-link",
-          attrs: { href: "/", title: "Página Oficial" }
-        },
-        [
-          _c("i", {
-            staticClass: "fal fa-arrow-circle-left",
-            attrs: { "aria-hidden": "true" }
-          }),
-          _vm._v("\n                            Página Oficial")
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", { staticClass: "nav-item" }, [
-      _c(
-        "a",
-        { staticClass: "nav-link logout", attrs: { href: "#", title: "Sair" } },
-        [_vm._v("Logout "), _c("i", { staticClass: "fa fa-sign-out" })]
-      )
+      ])
     ])
   }
 ]
