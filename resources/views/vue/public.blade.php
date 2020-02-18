@@ -12,12 +12,14 @@
 
     <script src="{{ asset('vendor/jQuery/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    
+    <script src="{{ asset('vendor/public/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('vendor/public/stickyFill/stickyfill.min.js') }}"></script>
+    <script src="{{ asset('vendor/public/fancybox/fancybox.min.js') }}"></script>
+    <script src="{{ asset('vendor/public/jQueryEasing/jquery.easing.1.3.js') }}"></script>
 
-    <script src="{{ asset('vendor/public/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('vendor/public/isotope/isotope.min.js') }}"></script>
-    <script src="{{ asset('vendor/public/lightcase/lightcase.js') }}"></script>
-    <script src="{{ asset('vendor/public/waypoints/waypoint.min.js') }}"></script>
-    <script src="{{ asset('vendor/public/countTo/jquery.countTo.js') }}"></script>
+    <script src="{{ asset('vendor/public/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('vendor/public/animateNumber/animateNumber.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/public.js') }}"></script>

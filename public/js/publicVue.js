@@ -19537,98 +19537,187 @@ var staticRenderFns = [
     return _c(
       "section",
       {
-        staticClass: "bg-white bg-white topBox-rounded",
-        attrs: { id: "gtco-who-we-are" }
+        staticClass: "site-section about-us-section",
+        attrs: { id: "about-us-section" }
       },
       [
         _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "section-content" }, [
-            _c("div", { staticClass: "title-wrap" }, [
-              _c("h2", { staticClass: "section-title" }, [
-                _vm._v("\n                    The easiest way "),
-                _c("br"),
-                _vm._v("to build"),
-                _c("b", [_vm._v(" websites online")])
+          _c("div", { staticClass: "row mb-5 pt-0 site-section" }, [
+            _c("div", { staticClass: "col-md-6 align-self-center" }, [
+              _c("h3", { staticClass: "section-title-sub text-primary" }, [
+                _vm._v("About Us")
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "section-sub-title" }, [
+              _c("h2", { staticClass: "section-title mb-4" }, [
+                _vm._v("Who Are You Guys")
+              ]),
+              _vm._v(" "),
+              _c("p", [
                 _vm._v(
-                  "\n                    Praesent commodo cursus magna, vel scelerisque nisl\n                    consectetur et. Nulla vitae elit libero, a "
-                ),
-                _c("br"),
+                  "Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae."
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
                 _vm._v(
-                  "\n                    pharetra augue. Donec id elit non mi porta gravida at\n                    eget metus.\n                "
+                  "Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae."
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-4" }, [
+                _c(
+                  "a",
+                  { staticClass: "spepcial_link", attrs: { href: "#" } },
+                  [_vm._v("Read more about us")]
                 )
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "row text-center" }, [
-              _c("div", { staticClass: "col-md-4 col-sm-6 " }, [
-                _c("h5", { staticClass: "mb-4" }, [_vm._v("Simple and Clean")]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                        Donec sed odio dui. Etiam porta sem malesuada magna\n                        mollis euismod. Nullam id dolor id nibh ultricies\n                        vehicula ut id elit.\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-link",
-                      attrs: { href: "#", role: "button" }
-                    },
-                    [_vm._v("View details")]
-                  )
-                ])
+            _c("div", { staticClass: "col-md-5 ml-auto img-overlap" }, [
+              _c("div", { staticClass: "img-1" }, [
+                _c("img", {
+                  staticClass: "img-fluid img-shadow",
+                  attrs: { src: "images/sq_img_6.jpg", alt: "Image" }
+                })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 col-sm-6 " }, [
-                _c("h5", { staticClass: "mb-4" }, [
-                  _vm._v("Easy to Customize")
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                        Duis mollis, est non commodo luctus, nisi erat\n                        porttitor ligula, eget lacinia odio sem nec elit.\n                        Vestibulum id ligula porta felis.\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-link",
-                      attrs: { href: "#", role: "button" }
-                    },
-                    [_vm._v("View details")]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-4 col-sm-6 " }, [
-                _c("h5", { staticClass: "mb-4" }, [_vm._v("Fully Responsive")]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                        Donec sed odio dui. Cras justo odio, dapibus ac\n                        facilisis in, egestas eget quam. Vestibulum id\n                        ligula porta felis euismod semper.\n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-link",
-                      attrs: { href: "#", role: "button" }
-                    },
-                    [_vm._v("View details")]
-                  )
-                ])
+              _c("div", { staticClass: "img-2" }, [
+                _c("img", {
+                  staticClass: "img-fluid img-shadow",
+                  attrs: { src: "images/sq_img_10.jpg", alt: "Image" }
+                })
               ])
             ])
-          ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "row pb-0 border-top pt-5 block__19738 section-counter"
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "col-6 col-md-6 col-lg-3 mb-5 mb-lg-0" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-items-center justify-content-center mb-2"
+                    },
+                    [
+                      _c("span", { staticClass: "icon-line-mobile mr-3" }),
+                      _vm._v(" "),
+                      _c(
+                        "strong",
+                        {
+                          staticClass: "number",
+                          attrs: { "data-number": "2393" }
+                        },
+                        [_vm._v("0")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "caption" }, [
+                    _vm._v("Completed Projects")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-6 col-md-6 col-lg-3 mb-5 mb-lg-0" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-items-center justify-content-center mb-2"
+                    },
+                    [
+                      _c("span", { staticClass: "icon-line-lightbulb mr-3" }),
+                      _vm._v(" "),
+                      _c(
+                        "strong",
+                        {
+                          staticClass: "number",
+                          attrs: { "data-number": "54" }
+                        },
+                        [_vm._v("0")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "caption" }, [
+                    _vm._v("Winners & Awards")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-6 col-md-6 col-lg-3 mb-5 mb-lg-0" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-items-center justify-content-center mb-2"
+                    },
+                    [
+                      _c("span", { staticClass: "icon-line-trophy mr-3" }),
+                      _vm._v(" "),
+                      _c(
+                        "strong",
+                        {
+                          staticClass: "number",
+                          attrs: { "data-number": "120" }
+                        },
+                        [_vm._v("0")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "caption" }, [
+                    _vm._v("Number of Team")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-6 col-md-6 col-lg-3 mb-5 mb-lg-0" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-items-center justify-content-center mb-2"
+                    },
+                    [
+                      _c("span", { staticClass: "icon-line-puzzle mr-3" }),
+                      _vm._v(" "),
+                      _c(
+                        "strong",
+                        {
+                          staticClass: "number",
+                          attrs: { "data-number": "550" }
+                        },
+                        [_vm._v("0")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "caption" }, [
+                    _vm._v("Line of Codes")
+                  ])
+                ]
+              )
+            ]
+          )
         ])
       ]
     )
@@ -19655,80 +19744,125 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "footer",
-    { staticClass: "mastfoot mb-3 bg-white py-4 border-top" },
-    [
-      _c("div", { staticClass: "inner container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-md-6 d-flex align-items-center justify-content-md-start justify-content-center"
-            },
-            [
-              _c("p", { staticClass: "mb-0" }, [
-                _vm._v(
-                  "\n                    ©\n                    " +
-                    _vm._s(new Date().getFullYear()) +
-                    "\n                    "
-                ),
-                _c("a", { attrs: { href: "#", title: "Home" } }, [
-                  _vm._v("Events")
-                ]),
-                _vm._v(". All Right Reserved.\n                ")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _vm._m(0)
-        ])
-      ])
-    ]
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
+    return _c("footer", { staticClass: "site-footer slanted-footer" }, [
       _c(
-        "nav",
-        {
-          staticClass:
-            "nav nav-mastfoot justify-content-md-end justify-content-center"
-        },
-        [
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: { href: "#", title: "Facebook" }
-            },
-            [_c("i", { staticClass: "fab fa-facebook-f" })]
-          ),
+        "a",
+        { staticClass: "smoothscroll scroll-top", attrs: { href: "#top" } },
+        [_c("span", { staticClass: "icon-keyboard_arrow_up" })]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row mb-5" }, [
+          _c("div", { staticClass: "col-6 col-md-3 mb-4 mb-md-0" }, [
+            _c("h3", [_vm._v("Scenic Products")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Web Design")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Graphic Design")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Web Developers")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Resources")])
+              ])
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: { href: "#", title: "Instagram" }
-            },
-            [_c("i", { staticClass: "fab fa-instagram" })]
-          ),
+          _c("div", { staticClass: "col-6 col-md-3 mb-4 mb-md-0" }, [
+            _c("h3", [_vm._v("Company")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("About Us")])
+              ]),
+              _vm._v(" "),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Career")])]),
+              _vm._v(" "),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Blog")])]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Resources")])
+              ])
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "nav-link",
-              attrs: { href: "#", title: "Linked In" }
-            },
-            [_c("i", { staticClass: "fab fa-linkedin" })]
-          )
-        ]
-      )
+          _c("div", { staticClass: "col-6 col-md-3 mb-4 mb-md-0" }, [
+            _c("h3", [_vm._v("Support")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Support")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Privacy")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Terms of Service")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6 col-md-3 mb-4 mb-md-0" }, [
+            _c("h3", [_vm._v("Contact Us")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "footer-social" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "icon-facebook" })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "icon-twitter" })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "icon-instagram" })
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", { staticClass: "icon-linkedin" })
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row text-center" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _c("p", { staticClass: "copyright" }, [
+              _c("small", { staticClass: "block" }, [
+                _vm._v(
+                  "\n            Copyright © 2020\n            All rights reserved | This template is made with\n            "
+                ),
+                _c("i", {
+                  staticClass: "icon-heart text-danger",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(" by\n            "),
+                _c(
+                  "a",
+                  { attrs: { href: "https://colorlib.com", target: "_blank" } },
+                  [_vm._v("Colorlib")]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
@@ -19760,60 +19894,136 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      {
-        staticClass: "navbar navbar-expand-lg py-4",
-        attrs: { id: "gtco-header-navbar" }
-      },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "a",
-            {
-              staticClass: "navbar-brand d-flex align-items-center",
-              attrs: { href: "/", title: "Home" }
-            },
-            [_vm._v("\n            EventAssistant\n        ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "navbar-toggler",
-              attrs: {
-                type: "button",
-                "data-toggle": "collapse",
-                "data-target": "#navbar-nav-header",
-                "aria-controls": "navbar-nav-header",
-                "aria-expanded": "false",
-                "aria-label": "Toggle navigation"
-              }
-            },
-            [_c("span", { staticClass: "lnr lnr-menu" })]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "collapse navbar-collapse",
-              attrs: { id: "navbar-nav-header" }
-            },
-            [
-              _c("ul", { staticClass: "navbar-nav ml-auto" }, [
-                _c("li", { staticClass: "nav-item" }, [
-                  _c(
-                    "a",
-                    { staticClass: "nav-link", attrs: { href: "#home" } },
-                    [_vm._v("Home")]
-                  )
-                ])
-              ])
-            ]
-          )
+    return _c("div", [
+      _c("div", { staticClass: "site-mobile-menu site-navbar-target" }, [
+        _c("div", { staticClass: "site-mobile-menu-header" }, [
+          _c("div", { staticClass: "site-mobile-menu-close mt-3" }, [
+            _c("span", { staticClass: "icon-close2 js-menu-toggle" })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "site-mobile-menu-body" })
+      ]),
+      _vm._v(" "),
+      _c("header", { staticClass: "site-navbar mt-3", attrs: { id: "top" } }, [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "site-logo col-6" }, [
+              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Scenic")])
+            ]),
+            _vm._v(" "),
+            _c("nav", { staticClass: "mx-auto site-navigation" }, [
+              _c(
+                "ul",
+                { staticClass: "site-menu js-clone-nav d-none d-lg-block" },
+                [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link active",
+                        attrs: { href: "index.html" }
+                      },
+                      [_vm._v("Home")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "about.html" } }, [
+                      _vm._v("About")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "portfolio.html" } }, [
+                      _vm._v("Portfolio")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "has-children" }, [
+                    _c("a", { attrs: { href: "services.html" } }, [
+                      _vm._v("Pages")
+                    ]),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "dropdown" }, [
+                      _c("li", [
+                        _c("a", { attrs: { href: "services.html" } }, [
+                          _vm._v("Services")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "service-single.html" } }, [
+                          _vm._v("Service Single")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "blog-single.html" } }, [
+                          _vm._v("Blog Single")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "portfolio-single.html" } }, [
+                          _vm._v("Portfolio Single")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "testimonials.html" } }, [
+                          _vm._v("Testimonials")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "faq.html" } }, [
+                          _vm._v("Frequently Ask Questions")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("a", { attrs: { href: "gallery.html" } }, [
+                          _vm._v("Gallery")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "blog.html" } }, [_vm._v("Blog")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "contact.html" } }, [
+                      _vm._v("Contact")
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-6 site-burger-menu d-block d-lg-none text-right"
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "site-menu-toggle js-menu-toggle",
+                    attrs: { href: "#" }
+                  },
+                  [_c("span", { staticClass: "icon-menu h3" })]
+                )
+              ]
+            )
+          ])
         ])
-      ]
-    )
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -19839,7 +20049,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "boxed-page" },
     [
       _c("public-header"),
       _vm._v(" "),

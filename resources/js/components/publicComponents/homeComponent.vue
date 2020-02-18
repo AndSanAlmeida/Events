@@ -1,65 +1,60 @@
 <template>
-    <section id="gtco-who-we-are" class="bg-white bg-white topBox-rounded">
-        <div class="container">
-            <div class="section-content">
-                <div class="title-wrap">
-                    <h2 class="section-title">
-                        The easiest way <br />to build<b> websites online</b>
-                    </h2>
-                    <p class="section-sub-title">
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur et. Nulla vitae elit libero, a <br />
-                        pharetra augue. Donec id elit non mi porta gravida at
-                        eget metus.
-                    </p>
-                </div>
+  <section class="site-section about-us-section" id="about-us-section">
+    <div class="container">
+      <div class="row mb-5 pt-0 site-section">
+        <div class="col-md-6 align-self-center">
+          <h3 class="section-title-sub text-primary">About Us</h3>
+          <h2 class="section-title mb-4">Who Are You Guys</h2>
 
-                <div class="row text-center">
-                    <div class="col-md-4 col-sm-6 ">
-                        <h5 class="mb-4">Simple and Clean</h5>
-                        <p>
-                            Donec sed odio dui. Etiam porta sem malesuada magna
-                            mollis euismod. Nullam id dolor id nibh ultricies
-                            vehicula ut id elit.
-                        </p>
-                        <p>
-                            <a class="btn btn-link" href="#" role="button"
-                                >View details</a
-                            >
-                        </p>
-                    </div>
-                    <!-- /.col-md-4 col-sm-6  -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <h5 class="mb-4">Easy to Customize</h5>
-                        <p>
-                            Duis mollis, est non commodo luctus, nisi erat
-                            porttitor ligula, eget lacinia odio sem nec elit.
-                            Vestibulum id ligula porta felis.
-                        </p>
-                        <p>
-                            <a class="btn btn-link" href="#" role="button"
-                                >View details</a
-                            >
-                        </p>
-                    </div>
-                    <!-- /.col-md-4 col-sm-6  -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <h5 class="mb-4">Fully Responsive</h5>
-                        <p>
-                            Donec sed odio dui. Cras justo odio, dapibus ac
-                            facilisis in, egestas eget quam. Vestibulum id
-                            ligula porta felis euismod semper.
-                        </p>
-                        <p>
-                            <a class="btn btn-link" href="#" role="button"
-                                >View details</a
-                            >
-                        </p>
-                    </div>
-                    <!-- /.col-md-4 col-sm-6  -->
-                </div>
-                <!-- /.row -->
-            </div>
+          <p>Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.</p>
+          <p>Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.</p>
+          <p class="mt-4">
+            <a href="#" class="spepcial_link">Read more about us</a>
+          </p>
         </div>
-    </section>
+        <div class="col-md-5 ml-auto img-overlap">
+          <div class="img-1">
+            <img src="images/sq_img_6.jpg" alt="Image" class="img-fluid img-shadow" />
+          </div>
+          <div class="img-2">
+            <img src="images/sq_img_10.jpg" alt="Image" class="img-fluid img-shadow" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row pb-0 border-top pt-5 block__19738 section-counter">
+        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center justify-content-center mb-2">
+            <span class="icon-line-mobile mr-3"></span>
+            <strong class="number" data-number="2393">0</strong>
+          </div>
+          <span class="caption">Completed Projects</span>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center justify-content-center mb-2">
+            <span class="icon-line-lightbulb mr-3"></span>
+            <strong class="number" data-number="54">0</strong>
+          </div>
+          <span class="caption">Winners &amp; Awards</span>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center justify-content-center mb-2">
+            <span class="icon-line-trophy mr-3"></span>
+            <strong class="number" data-number="120">0</strong>
+          </div>
+          <span class="caption">Number of Team</span>
+        </div>
+
+        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center justify-content-center mb-2">
+            <span class="icon-line-puzzle mr-3"></span>
+            <strong class="number" data-number="550">0</strong>
+          </div>
+          <span class="caption">Line of Codes</span>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
