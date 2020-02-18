@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer slanted-footer">
     <a href="#top" class="smoothscroll scroll-top">
-      <span class="icon-keyboard_arrow_up"></span>
+      <span class="far fa-angle-up"></span>
     </a>
 
     <div class="container">
@@ -58,16 +58,10 @@
           <h3>Contact Us</h3>
           <div class="footer-social">
             <a href="#">
-              <span class="icon-facebook"></span>
+              <span class="fab fa-facebook-f"></span>
             </a>
             <a href="#">
-              <span class="icon-twitter"></span>
-            </a>
-            <a href="#">
-              <span class="icon-instagram"></span>
-            </a>
-            <a href="#">
-              <span class="icon-linkedin"></span>
+              <span class="fab fa-linkedin-in"></span>
             </a>
           </div>
         </div>
@@ -77,6 +71,16 @@
         <div class="col-12">
           <p class="copyright">
             <small class="block">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy; 2020
+              All rights reserved | Made by
+              <a
+                href="#"
+                target="_blank"
+              >André Almeida</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </small>
+            <small class="block d-none">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               Copyright &copy; 2020
               All rights reserved | This template is made with

@@ -14,6 +14,7 @@
 
         {{-- Styles --}}
 		<link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet" type="text/css">
 		<link href="{{ asset('css/jquery.fancybox.min.css') }}" rel="stylesheet">
 
 		<!-- Custom styles for this template-->

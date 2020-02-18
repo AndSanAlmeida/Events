@@ -3,7 +3,10 @@
 @section('title', 'Home')
 
 @section('content')
-    <public-layout></public-layout>
+    <public-header-mobile></public-header-mobile>
+    <public-header></public-header>
+    <router-view></router-view>
+    <public-footer></public-footer>
 @endsection
 
 @section('pagescript')

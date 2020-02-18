@@ -77,12 +77,12 @@
 
 .site-navbar .site-navigation .site-menu .has-children > a:before {
   position: absolute;
-  content: "\E313";
+  content: "\F078";
   font-size: 16px;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  font-family: "icomoon";
+  font-family: "Font Awesome 5 Pro";
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown {
@@ -350,7 +350,7 @@
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
   font-size: 12px;
   z-index: 20;
-  font-family: "icomoon";
+  font-family: "Font Awesome 5 Pro";
   content: "\F078";
   position: absolute;
   top: 50%;

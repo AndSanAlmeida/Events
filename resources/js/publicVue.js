@@ -12,13 +12,28 @@ axios.defaults.headers.common["Authorization"] = localStorage.getItem(
     "access_token"
 );
 
+// =======================
 // FIXED
+// =======================
 Vue.component(
-    "public-layout",
-    require("./components/publicComponents/layoutComponent.vue").default
+    "public-header-mobile",
+    require("./components/publicComponents/includesComponents/publicHeaderMobileComponent.vue")
+        .default
+);
+Vue.component(
+    "public-header",
+    require("./components/publicComponents/includesComponents/publicHeaderComponent.vue")
+        .default
+);
+Vue.component(
+    "public-footer",
+    require("./components/publicComponents/includesComponents/publicFooterComponent.vue")
+        .default
 );
 
+// =======================
 // CONST
+// =======================
 const home = Vue.component(
     "home",
     require("./components/publicComponents/homeComponent.vue").default
