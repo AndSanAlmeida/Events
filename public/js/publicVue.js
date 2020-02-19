@@ -1899,6 +1899,164 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      email: "",
+      password: "",
+      loading: false,
+      attemptSubmit: false,
+      serverError: false,
+      serverErrorMessage: ""
+    };
+  },
+  computed: {
+    missingEmail: function missingEmail() {
+      return this.email.trim() === "" && !this.hasServerError && this.attemptSubmit;
+    },
+    missingPassword: function missingPassword() {
+      return this.password.trim() === "" && !this.hasServerError && this.attemptSubmit;
+    },
+    hasClientError: function hasClientError() {
+      return this.missingEmail || this.missingPassword;
+    },
+    hasServerError: function hasServerError() {
+      return this.serverError;
+    },
+    isFormInvalid: function isFormInvalid() {
+      return (this.hasClientError || this.hasServerError) && this.attemptSubmit;
+    }
+  },
+  methods: {
+    submitForm: function submitForm(event) {
+      var _this = this;
+
+      this.serverError = false;
+      this.attemptSubmit = true;
+      this.loading = true;
+
+      if (!this.isFormInvalid) {
+        var data = {
+          email: this.email,
+          password: this.password
+        };
+        axios.post("/api/login", data).then(function (response) {
+          localStorage.setItem("access_token", "Bearer " + response.data.access_token);
+          axios.get("/api/user", {
+            headers: {
+              Authorization: "Bearer " + response.data.access_token
+            }
+          }).then(function (response) {
+            if (response.data.type == 1) {
+              window.location.href = "/admin/#/home";
+              _this.loading = false;
+            } else if (response.data.type == 0) {
+              window.location.href = "/";
+              _this.loading = false;
+            }
+          })["catch"](function (error) {
+            _this.serverError = true;
+            _this.serverErrorMessage = error.response.data.data;
+            _this.loading = false;
+          });
+        })["catch"](function (error) {
+          _this.serverError = true;
+          console.log(error);
+          _this.serverErrorMessage = error.response.data.data;
+          _this.loading = false;
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/publicComponents/includesComponents/publicHeaderComponent.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/publicComponents/includesComponents/publicHeaderComponent.vue?vue&type=script&lang=js& ***!
@@ -19625,9 +19783,7 @@ var staticRenderFns = [
                         "label",
                         { staticClass: "text-black", attrs: { for: "email" } },
                         [
-                          _c("i", {
-                            staticClass: "fad fa-envelope-open fa-lg mr-2"
-                          }),
+                          _c("i", { staticClass: "fad fa-mailbox fa-lg mr-2" }),
                           _vm._v("Email\n              ")
                         ]
                       ),
@@ -19637,7 +19793,8 @@ var staticRenderFns = [
                         attrs: {
                           type: "email",
                           id: "email",
-                          placeholder: "name@email.com"
+                          placeholder: "name@email.com",
+                          required: ""
                         }
                       })
                     ])
@@ -19662,10 +19819,41 @@ var staticRenderFns = [
                         attrs: {
                           type: "password",
                           id: "password",
-                          placeholder: "Password"
+                          placeholder: "Password",
+                          required: ""
                         }
                       })
                     ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" }, [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "#",
+                          "data-toggle": "modal",
+                          "data-dismiss": "modal",
+                          "data-target": "#forgotPasswordModal"
+                        }
+                      },
+                      [_vm._v("Forgot Password?")]
+                    ),
+                    _vm._v(" "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "#",
+                          "data-toggle": "modal",
+                          "data-dismiss": "modal",
+                          "data-target": "#registerModal"
+                        }
+                      },
+                      [_vm._v("Create new Account")]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "text-right" }, [
@@ -19673,7 +19861,7 @@ var staticRenderFns = [
                       "button",
                       {
                         staticClass: "btn btn-secondary",
-                        attrs: { type: "submit", "data-dismiss": "modal" }
+                        attrs: { type: "button", "data-dismiss": "modal" }
                       },
                       [_vm._v("Close")]
                     ),
@@ -19682,7 +19870,7 @@ var staticRenderFns = [
                       "button",
                       {
                         staticClass: "btn btn-primary",
-                        attrs: { type: "button" }
+                        attrs: { type: "submit" }
                       },
                       [_vm._v("Sign In")]
                     )
@@ -19780,7 +19968,8 @@ var staticRenderFns = [
                         attrs: {
                           type: "text",
                           id: "fname",
-                          placeholder: "First Name"
+                          placeholder: "First Name",
+                          required: ""
                         }
                       })
                     ]),
@@ -19797,7 +19986,8 @@ var staticRenderFns = [
                         attrs: {
                           type: "text",
                           id: "lname",
-                          placeholder: "Last Name"
+                          placeholder: "Last Name",
+                          required: ""
                         }
                       })
                     ])
@@ -19816,7 +20006,8 @@ var staticRenderFns = [
                         attrs: {
                           type: "email",
                           id: "email",
-                          placeholder: "name@email.com"
+                          placeholder: "name@email.com",
+                          required: ""
                         }
                       })
                     ])
@@ -19835,7 +20026,12 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("input", {
                         staticClass: "form-control",
-                        attrs: { type: "password", id: "password" }
+                        attrs: {
+                          type: "password",
+                          id: "password",
+                          placeholder: "Password",
+                          required: ""
+                        }
                       })
                     ])
                   ]),
@@ -19853,9 +20049,29 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("input", {
                         staticClass: "form-control",
-                        attrs: { type: "password", id: "confirmPassword" }
+                        attrs: {
+                          type: "password",
+                          id: "confirmPassword",
+                          placeholder: "Password",
+                          required: ""
+                        }
                       })
                     ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-center" }, [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href: "#",
+                          "data-toggle": "modal",
+                          "data-dismiss": "modal",
+                          "data-target": "#loginModal"
+                        }
+                      },
+                      [_vm._v("Already have an Account?")]
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "text-right" }, [
@@ -19872,7 +20088,7 @@ var staticRenderFns = [
                       "button",
                       {
                         staticClass: "btn btn-primary",
-                        attrs: { type: "button" }
+                        attrs: { type: "submit" }
                       },
                       [_vm._v("Register")]
                     )
@@ -35611,15 +35827,17 @@ if (token) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loginComponent_vue_vue_type_template_id_5d9ea7c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loginComponent.vue?vue&type=template&id=5d9ea7c0& */ "./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=template&id=5d9ea7c0&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _loginComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loginComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _loginComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _loginComponent_vue_vue_type_template_id_5d9ea7c0___WEBPACK_IMPORTED_MODULE_0__["render"],
   _loginComponent_vue_vue_type_template_id_5d9ea7c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -35633,6 +35851,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/publicComponents/authComponents/loginComponent.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_loginComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./loginComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/publicComponents/authComponents/loginComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_loginComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
