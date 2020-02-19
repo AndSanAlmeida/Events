@@ -9,18 +9,18 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quibusdam possimus quasi porro! Itaque?</p>
             </div>
             <p class="mt-5">
-              <a href="#" class="btn btn-outline-white btn-md">Get in touch</a>
+              <a href="#" class="btn btn-outline-white btn-md">Try now</a>
             </p>
           </div>
         </div>
       </div>
 
       <!-- VIDEO -->
-      <!-- <div class="video-container">
-      <video autoplay loop="true">
-        <source type="video/mp4" src="videos/video.mp4" />
-      </video>
-      </div>-->
+      <div class="video-container">
+        <video autoplay loop="true">
+          <source type="video/mp4" src="videos/video.mp4" />
+        </video>
+      </div>
 
       <a href="#about-us-section" class="scroll-button smoothscroll">
         <span class="far fa-angle-down"></span>
@@ -40,14 +40,14 @@
               <a href="#" class="spepcial_link">Read more about us</a>
             </p>
           </div>
-          <!-- <div class="col-md-5 ml-auto img-overlap">
+          <div class="col-md-5 ml-auto img-overlap">
             <div class="img-1">
-              <img src="images/sq_img_6.jpg" alt="Image" class="img-fluid img-shadow" />
+              <img src="img/sq_img_6.jpg" alt="Image" class="img-fluid img-shadow" />
             </div>
             <div class="img-2">
-              <img src="images/sq_img_10.jpg" alt="Image" class="img-fluid img-shadow" />
+              <img src="img/sq_img_10.jpg" alt="Image" class="img-fluid img-shadow" />
             </div>
-          </div>-->
+          </div>
         </div>
 
         <div class="row pb-0 border-top pt-5 block__19738 section-counter">

@@ -19536,12 +19536,20 @@ var staticRenderFns = [
                         staticClass: "btn btn-outline-white btn-md",
                         attrs: { href: "#" }
                       },
-                      [_vm._v("Get in touch")]
+                      [_vm._v("Try now")]
                     )
                   ])
                 ])
               ]
             )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "video-container" }, [
+            _c("video", { attrs: { autoplay: "", loop: "true" } }, [
+              _c("source", {
+                attrs: { type: "video/mp4", src: "videos/video.mp4" }
+              })
+            ])
           ]),
           _vm._v(" "),
           _c(
@@ -19591,6 +19599,22 @@ var staticRenderFns = [
                     { staticClass: "spepcial_link", attrs: { href: "#" } },
                     [_vm._v("Read more about us")]
                   )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-5 ml-auto img-overlap" }, [
+                _c("div", { staticClass: "img-1" }, [
+                  _c("img", {
+                    staticClass: "img-fluid img-shadow",
+                    attrs: { src: "img/sq_img_6.jpg", alt: "Image" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "img-2" }, [
+                  _c("img", {
+                    staticClass: "img-fluid img-shadow",
+                    attrs: { src: "img/sq_img_10.jpg", alt: "Image" }
+                  })
                 ])
               ])
             ]),
@@ -19905,13 +19929,13 @@ var staticRenderFns = [
       "header",
       { staticClass: "site-navbar mt-3", attrs: { id: "top" } },
       [
-        _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row align-items-center" }, [
             _c("div", { staticClass: "site-logo col-6" }, [
               _c("a", { attrs: { href: "#" } }, [_vm._v("Events")])
             ]),
             _vm._v(" "),
-            _c("nav", { staticClass: "mx-auto site-navigation" }, [
+            _c("nav", { staticClass: "ml-auto site-navigation" }, [
               _c(
                 "ul",
                 { staticClass: "site-menu js-clone-nav d-none d-lg-block" },
@@ -19924,15 +19948,15 @@ var staticRenderFns = [
                     )
                   ]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "has-children" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("\n              Pages\n              ")
-                    ]),
-                    _vm._v(" "),
-                    _c("ul", { staticClass: "dropdown" }, [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Services")])
-                      ])
+                  _c("li", [
+                    _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                      _c("strong", [_vm._v("Sign In")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                      _c("strong", [_vm._v("Register")])
                     ])
                   ])
                 ]
@@ -19943,7 +19967,7 @@ var staticRenderFns = [
               "div",
               {
                 staticClass:
-                  "col-6 site-burger-menu d-block d-lg-none text-right"
+                  "col-6 site-burger-menu d-block d-lg-none text-right mt-2"
               },
               [
                 _c(
