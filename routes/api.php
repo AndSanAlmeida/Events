@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => 'prevent-back-history'],function(){
+	Route::middleware('auth:api')->post('logout', 'LoginControllerAPI@logout');
+	Route::get('/', function() {
+		return view('vue.public');
+	});
 });
+
+// GENERAL USER
+// -------------------- AUTH --------------------
+Route::post('register', 'UserControllerAPI@store');
+Route::post('login', 'LoginControllerAPI@login');
+//Route::post('password/email', 'LoginControllerAPI@sendResetLinkEmail');
+//Route::post('password/reset', 'LoginControllerAPI@resetPassword');

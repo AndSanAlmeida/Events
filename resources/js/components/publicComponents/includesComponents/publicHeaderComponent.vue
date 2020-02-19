@@ -21,17 +21,21 @@
               </ul>
             </li>-->
             <li>
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#loginModal">
                 <strong>Sign In</strong>
               </a>
             </li>
+
             <li>
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">
                 <strong>Register</strong>
               </a>
             </li>
           </ul>
         </nav>
+
+        <header-login></header-login>
+        <header-register></header-register>
 
         <div class="col-6 site-burger-menu d-block d-lg-none text-right mt-2">
           <a href="#" class="site-menu-toggle js-menu-toggle">
@@ -42,3 +46,15 @@
     </div>
   </header>
 </template>
+
+<script>
+import headerLogin from "../authComponents/loginComponent.vue";
+import headerRegister from "../authComponents/registerComponent.vue";
+
+export default {
+  components: {
+    "header-login": headerLogin,
+    "header-register": headerRegister
+  }
+};
+</script>
