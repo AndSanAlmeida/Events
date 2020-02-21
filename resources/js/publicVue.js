@@ -38,11 +38,16 @@ const home = Vue.component(
     "home",
     require("./components/publicComponents/homeComponent.vue").default
 );
+const profile = Vue.component(
+    "profile",
+    require("./components/publicComponents/profileComponent.vue").default
+);
 
 // ROUTES
 const routes = [
     { path: "/", redirect: "/home" },
-    { path: "/home", component: home }
+    { path: "/home", component: home },
+    { path: "/profile", component: profile }
 ];
 
 const router = new VueRouter({

@@ -7,7 +7,7 @@
     aria-labelledby="registerModalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h2 id="loginModalLabel">Register</h2>
@@ -36,10 +36,10 @@
 
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="email">Email</label>
+                <label class="text-black" for="registerEmail">Email</label>
                 <input
                   type="email"
-                  id="email"
+                  id="registerEmail"
                   class="form-control"
                   placeholder="name@email.com"
                   required
@@ -49,10 +49,10 @@
 
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="password">Password</label>
+                <label class="text-black" for="registerPassword">Password</label>
                 <input
                   type="password"
-                  id="password"
+                  id="registerPassword"
                   class="form-control"
                   placeholder="Password"
                   required

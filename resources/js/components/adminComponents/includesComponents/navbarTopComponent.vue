@@ -38,9 +38,9 @@
             </li>
             <!-- Logout    -->
             <li class="nav-item">
-              <a href="#" class="nav-link logout" title="Sair">
+              <a href="javascript:;" class="nav-link logout" v-on:click="logout" title="Sair">
                 Logout
-                <i class="fal fa-sign-out"></i>
+                <i class="fa fa-sign-out"></i>
               </a>
             </li>
           </ul>
@@ -49,3 +49,35 @@
     </nav>
   </header>
 </template>
+<script>
+import User from "../../../classes/user.js";
+export default {
+  data: function() {
+    return {
+      user: new User(),
+      logged: false
+    };
+  },
+  methods: {
+    getUser: function() {
+      axios.get("/api/user").then(response => {
+        this.logged = true;
+        this.user.parse(response.data);
+      });
+    },
+    logout: function() {
+      axios.post("/api/logout", null).then(response => {
+        localStorage.removeItem("access_token");
+        window.location.href = "/";
+        this.logged = false;
+      });
+    }
+  },
+  created: function() {
+    if (localStorage.getItem("access_token") != null) {
+      this.getUser();
+      this.logged = true;
+    }
+  }
+};
+</script>

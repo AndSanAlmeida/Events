@@ -24,7 +24,7 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 // -------------------- AUTH --------------------
 Route::post('register', 'UserControllerAPI@store');
 Route::post('login', 'LoginControllerAPI@login');
-//Route::post('password/email', 'LoginControllerAPI@sendResetLinkEmail');
+Route::post('password/email', 'LoginControllerAPI@sendResetLinkEmail');
 //Route::post('password/reset', 'LoginControllerAPI@resetPassword');
 
 // LOGGED USER
@@ -32,6 +32,6 @@ Route::middleware('auth:api')->group(function () {
 	
 	// -------------------- USERS --------------------
 	Route::get('/user', function (Request $request) {
-	    return $request->user();
+		return $request->user();
 	});
 });

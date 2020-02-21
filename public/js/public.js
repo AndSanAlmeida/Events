@@ -200,7 +200,6 @@ jQuery(function($) {
                 e.preventDefault();
 
                 var hash = this.hash;
-
                 $("html, body").animate(
                     {
                         scrollTop: $(hash).offset().top
@@ -230,7 +229,7 @@ jQuery(function($) {
                         $(".number").each(function() {
                             var $this = $(this),
                                 num = $this.data("number");
-                            console.log(num);
+                            //console.log(num);
                             $this.animateNumber(
                                 {
                                     number: num,

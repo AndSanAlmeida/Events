@@ -1,16 +1,16 @@
 <template>
   <div
     class="modal fade"
-    id="loginModal"
+    id="recoverPasswordModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="loginModalLabel"
+    aria-labelledby="recoverPasswordModalLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 id="loginModalLabel">Sign In</h2>
+          <h2 id="recoverPasswordModalLabel">Recover Password</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -22,16 +22,22 @@
             <div class="alert alert-danger" role="alert" v-cloak v-show="serverError">
               <span>{{serverErrorMessage}}</span>
             </div>
+            <!-- Success -->
+            <div class="alert alert-success" role="alert" v-cloak v-show="success">
+              <p
+                class="text-center"
+              >Email com a informação para recuperar a password foi enviado. Verifique o seu email.</p>
+            </div>
 
             <!-- Email -->
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="loginEmail">
+                <label class="text-black" for="recoverEmail">
                   <i class="fad fa-mailbox fa-lg mr-2 text-primary"></i>Email
                 </label>
                 <input
                   type="email"
-                  id="loginEmail"
+                  id="recoverEmail"
                   class="form-control"
                   name="email"
                   v-model="email"
@@ -54,37 +60,6 @@
               </div>
             </div>
 
-            <!-- Password -->
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="loginPassword">
-                  <i class="fad fa-key fa-lg mr-2 text-primary"></i>Password
-                </label>
-                <input
-                  type="password"
-                  id="loginPassword"
-                  class="form-control"
-                  name="password"
-                  v-model="password"
-                  v-bind:class="{ 'is-invalid': missingPassword }"
-                  placeholder="Password"
-                  required
-                />
-
-                <!-- Password Error -->
-                <div class="clearfix">
-                  <div
-                    class="alert alert-danger"
-                    role="alert"
-                    v-cloak
-                    v-show="isFormInvalid && missingPassword"
-                  >
-                    <span v-if="missingPassword">Password is Missing</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <!-- Loading -->
             <div v-if="loading" class="text-center m-2">
               <div class="spinner-grow text-primary" role="status">
@@ -98,8 +73,8 @@
                 href="#"
                 data-toggle="modal"
                 data-dismiss="modal"
-                data-target="#recoverPasswordModal"
-              >Forgot Password?</a>
+                data-target="#loginModal"
+              >Back to Sign In</a>
               <br />
               <a
                 href="#"
@@ -111,7 +86,7 @@
 
             <div class="text-right">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Sign In</button>
+              <button type="submit" class="btn btn-primary">Recover</button>
             </div>
           </form>
         </div>
@@ -119,16 +94,17 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data: function() {
     return {
       email: "",
-      password: "",
-      loading: false,
       attemptSubmit: false,
       serverError: false,
-      serverErrorMessage: ""
+      serverErrorMessage: "",
+      success: false,
+      loading: false
     };
   },
   computed: {
@@ -145,15 +121,8 @@ export default {
         this.attemptSubmit
       );
     },
-    missingPassword: function() {
-      return (
-        this.password.trim() === "" &&
-        !this.hasServerError &&
-        this.attemptSubmit
-      );
-    },
     hasClientError: function() {
-      return this.missingEmail || this.invalidEmail || this.missingPassword;
+      return this.missingEmail || this.invalidEmail;
     },
     hasServerError: function() {
       return this.serverError;
@@ -168,48 +137,35 @@ export default {
       return re.test(email);
     },
     submitForm: function(event) {
+      //CLEARS SERVER ERROR'S
       this.serverError = false;
+      this.success = false;
+
+      //PREVENT FORM
+
+      event.preventDefault();
+
+      //FORM SUBMITED
       this.attemptSubmit = true;
-      this.loading = true;
+
+      //IF FORM IS VALID MAKE API REQUEST FOR LOGIN
       if (!this.isFormInvalid) {
+        this.loading = true;
         const data = {
-          email: this.email,
-          password: this.password
+          email: this.email
         };
         axios
-          .post("/api/login", data)
+          .post("/api/password/email", data)
           .then(response => {
-            localStorage.setItem(
-              "access_token",
-              "Bearer " + response.data.access_token
-            );
-
-            axios
-              .get("/api/user", {
-                headers: {
-                  Authorization: "Bearer " + response.data.access_token
-                }
-              })
-              .then(response => {
-                // if (response.data.type == 1) {
-                //   window.location.href = "/admin/#/home";
-                //   this.loading = false;
-                // } else if (response.data.type == 0) {
-                window.location.href = "/";
-                this.loading = false;
-                // }
-              })
-              .catch(error => {
-                this.serverError = true;
-                this.serverErrorMessage = error.response.data.data;
-                this.loading = false;
-              });
+            this.success = true;
+            this.attemptSubmit = false;
+            this.loading = false;
+            setTimeout(() => this.$router.push({ path: "/login" }), 5000);
           })
           .catch(error => {
-            console.log("Error: " + error);
-            this.serverError = true;
-            this.serverErrorMessage = error.response.data.data;
             this.loading = false;
+            this.serverError = true;
+            this.serverErrorMessage = error.response.data.msg;
           });
       }
     }

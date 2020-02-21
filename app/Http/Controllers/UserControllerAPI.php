@@ -4,20 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserControllerAPI extends Controller
 {
     public function store(Request $request) {
         // Validator
 		$validator = Validator::make($request->all(), [
-            'fname' => 'required|max:10',
-            'lname' => 'required|max:15',
+            'first_name' => 'required|max:15',
+            'last_name' => 'required|max:15',
 			'email' => 'required|email|max:255',
 			'password' => 'required|min:6'
 		]);
 
 		if ($request->wantsJson() && !$validator->fails()) {
 
-            // Verificação do email unico
+            // Verificação do email único
             $checkEmailExists = User::where('email', $request->input('email'))->first();
             if ($checkEmailExists) {
                 return response()->json(
@@ -26,8 +26,8 @@ class UserController extends Controller
 
             // Criação do User na DB
             $user= new User();
-            $user->fname = $request->fname;
-            $user->lname = $request->lname;
+            $user->first_name = $request->first_name;
+            $user->last_name = $request->last_name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
             $user->save();

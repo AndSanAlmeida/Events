@@ -5,9 +5,9 @@
 class User {
     constructor() {
         this.id = "";
-        this.name = "";
+        this.first_name = "";
+        this.last_name = "";
         this.email = "";
-        this.username = "";
         this.type = 0;
         this.avatar = "empty.png";
         this.access_token = "";
@@ -25,9 +25,9 @@ class User {
 
     parse(auth_user) {
         this.id = auth_user.id;
-        this.name = auth_user.name;
+        this.first_name = auth_user.first_name;
+        this.last_name = auth_user.last_name;
         this.email = auth_user.email;
-        this.username = auth_user.username;
         this.type = auth_user.type;
         this.avatar = auth_user.avatar;
     }
