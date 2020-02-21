@@ -20,7 +20,10 @@
           <form method="post" v-on:submit.prevent="submitForm">
             <!-- Alert -->
             <div class="alert alert-danger" role="alert" v-cloak v-show="serverError">
-              <span>{{serverErrorMessage}}</span>
+              <span>
+                <strong class="pr-1">Error:</strong>
+                {{serverErrorMessage}}
+              </span>
             </div>
 
             <!-- Email -->
@@ -41,15 +44,11 @@
                 />
 
                 <!-- Email Error -->
-                <div class="clearfix">
-                  <div
-                    class="alert alert-danger"
-                    role="alert"
-                    v-cloak
-                    v-show="isFormInvalid && missingEmail "
-                  >
-                    <span v-if="missingEmail">Email is Missing</span>
-                  </div>
+                <div class="text-danger" v-cloak v-show="isFormInvalid && missingEmail ">
+                  <span v-if="missingEmail">Email is Missing</span>
+                </div>
+                <div class="text-danger" v-cloak v-show="isFormInvalid">
+                  <span v-if="invalidEmail">Invalid Email</span>
                 </div>
               </div>
             </div>
@@ -72,15 +71,9 @@
                 />
 
                 <!-- Password Error -->
-                <div class="clearfix">
-                  <div
-                    class="alert alert-danger"
-                    role="alert"
-                    v-cloak
-                    v-show="isFormInvalid && missingPassword"
-                  >
-                    <span v-if="missingPassword">Password is Missing</span>
-                  </div>
+
+                <div class="text-danger" v-cloak v-show="isFormInvalid && missingPassword">
+                  <span v-if="missingPassword">Password is Missing</span>
                 </div>
               </div>
             </div>

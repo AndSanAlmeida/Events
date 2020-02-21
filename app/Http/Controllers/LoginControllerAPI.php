@@ -19,7 +19,9 @@ define('CLIENT_ID', '2');
 define('CLIENT_SECRET', 'G8bI5IIMgXay4YR2LJQMPIIWIA4G8dSElLIn70Hq');
 
 class LoginControllerAPI extends Controller
-{
+{   
+    use SendsPasswordResetEmails;
+
     public function login(Request $request)
     {
         $user = User::where('email', $request->email)->first();

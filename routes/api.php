@@ -31,6 +31,8 @@ Route::post('password/email', 'LoginControllerAPI@sendResetLinkEmail');
 Route::middleware('auth:api')->group(function () {
 	
 	// -------------------- USERS --------------------
+	Route::post('/user/avatar/update', 'UserControllerAPI@updateUserAvatar'); //UPDATE AVATAR
+	Route::post('/user/update', 'UserControllerAPI@updateUserInfo'); //UPDATE USER INFO
 	Route::get('/user', function (Request $request) {
 		return $request->user();
 	});

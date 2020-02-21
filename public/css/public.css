@@ -759,6 +759,49 @@ h4 {
   position: relative;
 }
 
+.section-nothero {
+  height: 45vh;
+  min-height: 460px;
+}
+
+.section-nothero > .container > .row {
+  height: 45vh;
+  min-height: 460px;
+}
+
+.section-nothero.overlay,
+.section-nothero.overlay-2 {
+  position: relative;
+}
+
+.section-nothero.overlay:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(125, 131, 132, 0.5);
+}
+
+.section-nothero.overlay-2:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(125, 131, 132, 0.5);
+  background: rgba(125, 131, 132, 0.95);
+}
+
+.section-nothero > .container {
+  z-index: 2;
+  position: relative;
+}
+
 .video-container {
   position: absolute;
   top: 0;
