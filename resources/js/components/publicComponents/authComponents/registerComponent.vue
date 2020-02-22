@@ -10,7 +10,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 id="loginModalLabel">Register</h2>
+          <h2 id="registerModalLabel">Register</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -93,8 +93,6 @@
                 <!-- Email Errors -->
                 <div class="text-danger" v-cloak v-show="isFormInvalid">
                   <span v-if="missingEmail">Email is Missing</span>
-                </div>
-                <div class="text-danger" v-cloak v-show="isFormInvalid">
                   <span v-if="invalidEmail">Invalid Email</span>
                 </div>
               </div>
@@ -117,8 +115,6 @@
                 <!-- Password Errors -->
                 <div class="text-danger" v-cloak v-show="isFormInvalid">
                   <span v-if="missingPassword">Password is Missing</span>
-                </div>
-                <div class="text-danger" v-cloak v-show="isFormInvalid">
                   <span v-if="invalidPassword">Password must have at least 6 chars</span>
                 </div>
               </div>
@@ -140,10 +136,8 @@
 
                 <!-- Password Confirmation Errors -->
                 <div class="text-danger" v-cloak v-show="isFormInvalid">
-                  <p v-if="missingPasswordConfirmation">Password Confirmation is Missing</p>
-                </div>
-                <div class="text-danger" v-cloak v-show="isFormInvalid">
-                  <p v-if="wrongPasswordConfirmation">Passwords doesn't match. Try again!</p>
+                  <span v-if="missingPasswordConfirmation">Password Confirmation is Missing</span>
+                  <span v-if="wrongPasswordConfirmation">Passwords doesn't match. Try again!</span>
                 </div>
               </div>
             </div>
@@ -321,7 +315,7 @@ export default {
       //FORM SUBMITED
       this.attemptSubmit = true;
 
-      //IF FORM IS VALID MAKE API REQUEST FOR LOGIN
+      //IF FORM IS VALID MAKE API REQUEST
       //if (!this.isFormInvalid && this.isVerifiedWithRecaptcha == true) {
       if (!this.isFormInvalid) {
         this.loading = true;

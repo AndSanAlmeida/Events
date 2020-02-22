@@ -33,6 +33,7 @@ Route::middleware('auth:api')->group(function () {
 	// -------------------- USERS --------------------
 	Route::post('/user/avatar/update', 'UserControllerAPI@updateUserAvatar'); //UPDATE AVATAR
 	Route::post('/user/update', 'UserControllerAPI@updateUserInfo'); //UPDATE USER INFO
+	Route::post('/user/password/update', 'UserControllerAPI@updateUserPassword'); //UPDATE PASSWORD
 	Route::get('/user', function (Request $request) {
 		return $request->user();
 	});

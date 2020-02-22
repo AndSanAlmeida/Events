@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Validator;
 use App\User;
@@ -105,5 +106,28 @@ class UserControllerAPI extends Controller
 
         return response()->json(200);
 
+    }
+
+    public function updateUserPassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'currentPassword' => 'required',
+            'newPassword' => 'required|min:6'
+        ]);
+
+        if ($request->wantsJson() && !$validator->fails()) {
+
+            if (!Hash::check($request->input('currentPassword'), $request->user()->password)) {
+                return response()->json(
+                    ['errorCode' => 1, 'msg' => 'Password id Incorrect.'], 400);
+            }
+
+            $request->user()->password = Hash::make($request->input('newPassword'));
+            $request->user()->save();
+
+            return response()->json(['msg' => 'Password was changed with Success.']);
+        } else {
+            return response()->json(['errorCode' => -1, 'msg' => 'Invalid Request.'], 400);
+        }
     }
 }

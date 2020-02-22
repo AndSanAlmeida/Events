@@ -32,25 +32,39 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-5 mb-5 mb-lg-0 col-xs-12 text-center">
-            <profileAvatar></profileAvatar>
+            <profile-avatar></profile-avatar>
           </div>
           <div class="col-lg-5 col-xs-12">
-            <profileInfo></profileInfo>
+            <profile-info></profile-info>
+
+            <!-- LINKS -->
+            <div class="text-center mt-2">
+              <a
+                href="#"
+                data-toggle="modal"
+                data-target="#changePasswordModal"
+              >Change Account Password?</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- PROFILE CHANGE PASSWORD MODAL -->
+    <profile-password></profile-password>
   </div>
 </template>
 
 <script>
-import profileAvatar from "./profileComponents/avatarComponent.vue";
-import profileInfo from "./profileComponents/infoComponent.vue";
+import profileAvatar from "./profileComponents/avatarComponent";
+import profileInfo from "./profileComponents/infoComponent";
+import profilePassword from "./profileComponents/changePasswordComponent";
 
 export default {
   components: {
-    profileAvatar: profileAvatar,
-    profileInfo: profileInfo
+    "profile-avatar": profileAvatar,
+    "profile-info": profileInfo,
+    "profile-password": profilePassword
   }
 };
 </script>

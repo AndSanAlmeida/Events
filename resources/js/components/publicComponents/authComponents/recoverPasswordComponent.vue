@@ -18,26 +18,29 @@
         <div class="modal-body">
           <!-- Form -->
           <form method="post" v-on:submit.prevent="submitForm">
-            <!-- Alert -->
-            <div class="alert alert-danger" role="alert" v-cloak v-show="serverError">
-              <span>{{serverErrorMessage}}</span>
-            </div>
-            <!-- Success -->
+            <!-- Alerts -->
             <div class="alert alert-success" role="alert" v-cloak v-show="success">
-              <p
-                class="text-center"
-              >Email com a informação para recuperar a password foi enviado. Verifique o seu email.</p>
+              <span class="text-center">
+                <strong class="pr-1">Success:</strong>
+                Email with the information to recover the password was sent. Check your email.
+              </span>
+            </div>
+            <div class="alert alert-danger" role="alert" v-cloak v-show="serverError">
+              <span>
+                <strong class="pr-1">Error:</strong>
+                {{serverErrorMessage}}
+              </span>
             </div>
 
             <!-- Email -->
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="recoverEmail">
+                <label class="text-black" for="loginEmail">
                   <i class="fad fa-mailbox fa-lg mr-2 text-primary"></i>Email
                 </label>
                 <input
                   type="email"
-                  id="recoverEmail"
+                  id="loginEmail"
                   class="form-control"
                   name="email"
                   v-model="email"
@@ -47,15 +50,9 @@
                 />
 
                 <!-- Email Error -->
-                <div class="clearfix">
-                  <div
-                    class="alert alert-danger"
-                    role="alert"
-                    v-cloak
-                    v-show="isFormInvalid && missingEmail "
-                  >
-                    <span v-if="missingEmail">Email is Missing</span>
-                  </div>
+                <div class="text-danger" v-cloak v-show="isFormInvalid && missingEmail ">
+                  <span v-if="missingEmail">Email is Missing</span>
+                  <span v-if="invalidEmail">Invalid Email</span>
                 </div>
               </div>
             </div>
@@ -74,19 +71,12 @@
                 data-toggle="modal"
                 data-dismiss="modal"
                 data-target="#loginModal"
-              >Back to Sign In</a>
-              <br />
-              <a
-                href="#"
-                data-toggle="modal"
-                data-dismiss="modal"
-                data-target="#registerModal"
-              >Create new Account</a>
+              >Back to Sign In?</a>
             </div>
 
             <div class="text-right">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Recover</button>
+              <button type="submit" class="btn btn-primary">Send Email</button>
             </div>
           </form>
         </div>
@@ -148,7 +138,6 @@ export default {
       //FORM SUBMITED
       this.attemptSubmit = true;
 
-      //IF FORM IS VALID MAKE API REQUEST FOR LOGIN
       if (!this.isFormInvalid) {
         this.loading = true;
         const data = {
@@ -160,7 +149,7 @@ export default {
             this.success = true;
             this.attemptSubmit = false;
             this.loading = false;
-            setTimeout(() => this.$router.push({ path: "/login" }), 5000);
+            setTimeout(() => this.$router.push({ path: "/" }), 3000);
           })
           .catch(error => {
             this.loading = false;

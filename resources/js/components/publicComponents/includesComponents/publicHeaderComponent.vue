@@ -70,9 +70,9 @@
 </template>
 
 <script>
-import headerLogin from "../authComponents/loginComponent.vue";
-import headerRegister from "../authComponents/registerComponent.vue";
-import headerRecover from "../authComponents/recoverPasswordComponent.vue";
+import headerLogin from "../authComponents/loginComponent";
+import headerRegister from "../authComponents/registerComponent";
+import headerRecover from "../authComponents/recoverPasswordComponent";
 import User from "../../../classes/user.js";
 
 export default {
