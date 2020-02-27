@@ -40,14 +40,11 @@
                   v-model="email"
                   v-bind:class="{ 'is-invalid': missingEmail  }"
                   placeholder="name@email.com"
-                  required
                 />
 
                 <!-- Email Error -->
                 <div class="text-danger" v-cloak v-show="isFormInvalid && missingEmail ">
                   <span v-if="missingEmail">Email is Missing</span>
-                </div>
-                <div class="text-danger" v-cloak v-show="isFormInvalid">
                   <span v-if="invalidEmail">Invalid Email</span>
                 </div>
               </div>
@@ -67,7 +64,6 @@
                   v-model="password"
                   v-bind:class="{ 'is-invalid': missingPassword }"
                   placeholder="Password"
-                  required
                 />
 
                 <!-- Password Error -->
@@ -163,8 +159,8 @@ export default {
     submitForm: function(event) {
       this.serverError = false;
       this.attemptSubmit = true;
-      this.loading = true;
       if (!this.isFormInvalid) {
+        this.loading = true;
         const data = {
           email: this.email,
           password: this.password
@@ -184,13 +180,8 @@ export default {
                 }
               })
               .then(response => {
-                // if (response.data.type == 1) {
-                //   window.location.href = "/admin/#/home";
-                //   this.loading = false;
-                // } else if (response.data.type == 0) {
                 window.location.href = "/";
                 this.loading = false;
-                // }
               })
               .catch(error => {
                 this.serverError = true;
