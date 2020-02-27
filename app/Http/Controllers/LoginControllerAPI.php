@@ -16,7 +16,7 @@ use Swift_Mailer;
 //define('YOUR_SERVER_URL', env('APP_URL'));
 define('YOUR_SERVER_URL', 'http://events.test');
 define('CLIENT_ID', '2');
-define('CLIENT_SECRET', 'G8bI5IIMgXay4YR2LJQMPIIWIA4G8dSElLIn70Hq');
+define('CLIENT_SECRET', 'g0wszcQzxlUafgAoQDCTloFaDuXbz9QQYzhcKM3C');
 
 class LoginControllerAPI extends Controller
 {   
